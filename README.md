@@ -3,9 +3,6 @@ Descripción:
 
 Este proyecto consiste en proporcionar un entorno controlado y seguro para realizar pruebas de concientización en seguridad informática mediante la replicación de una página HTML de Gmail que comúnmente se utiliza en ataques de phishing. El propósito principal de este repositorio es educativo y tiene como objetivo enseñar a los usuarios sobre los riesgos de seguridad en línea y cómo identificar y evitar ataques de phishing.
 
-Características principales:
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 Utilización de PHP:
 -------------------
 
